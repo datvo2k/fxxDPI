@@ -8,3 +8,14 @@ This software designed to bypass DPI with techniques like DoH and split CLIENT-H
 [DNS Queries over HTTPS (DoH)](https://datatracker.ietf.org/doc/html/rfc8484)   
 [Green Tunnel](https://github.com/SadeghHayeri/GreenTunnel)   
 [A dive into TLS 1.3 Architecture and its advantages over TLS 1.2](https://medium.com/@akarX23/a-dive-into-tls-1-3-architecture-and-its-advantages-over-tls-1-2-2f552de24fa0)
+
+
+## IDEA:
+- Run proxy localhost 
+- Use DNS providers like cloudflare, GoogleDNS, OpenDNS
+
+## LOGS:
+- version 0.1 focuses on local proxy development
+
+## VERSIONS:
+- 7/4/2023: v0.1
