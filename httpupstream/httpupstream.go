@@ -78,13 +78,8 @@ func (d *HTTPProxyDialer) Dial(network, address string) (conn net.Conn, err erro
 	return d.DialContext(context.Background(), network, address)
 }
 
-// DialContext implements the proxy.ContextDialer interface for
-// *HTTPProxyDialer.
-func (d *HTTPProxyDialer) DialContext(
-	ctx context.Context,
-	network string,
-	address string,
-) (conn net.Conn, err error) {
+// DialContext implements the proxy.ContextDialer interface for *HTTPProxyDialer.
+func (d *HTTPProxyDialer) DialContext(ctx context.Context, network string, address string) (conn net.Conn, err error) {
 	switch network {
 	case "tcp", "tcp4", "tcp6":
 	default:
@@ -213,8 +208,7 @@ func basicAuthHeader(userinfo *url.Userinfo) string {
 		[]byte(username+":"+password))
 }
 
-// wrappedDialer wraps proxy.Dialer and adds DialContext implementation when
-// necessary.
+// wrappedDialer wraps proxy.Dialer and adds DialContext implementation when necessary.
 type wrappedDialer struct {
 	d proxy.Dialer
 }
@@ -254,8 +248,7 @@ func (wd wrappedDialer) DialContext(ctx context.Context, network, address string
 	return conn, err
 }
 
-// maybeWrapWithContextDialer wraps the specified proxy.Dialer and adds
-// proxy.ContextDialer capabilities if they're missing.
+// maybeWrapWithContextDialer wraps the specified proxy.Dialer and adds proxy.ContextDialer capabilities if they're missing.
 func maybeWrapWithContextDialer(d proxy.Dialer) (cd proxy.ContextDialer) {
 	if xd, ok := d.(proxy.ContextDialer); ok {
 		return xd
