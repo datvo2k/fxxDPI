@@ -2,15 +2,11 @@ package proxy
 
 import (
 	"fmt"
-	"io"
-	"log"
 	"net"
 	"net/netip"
-	"strings"
 
 	"github.com/AdguardTeam/dnsproxy/proxy"
 	"github.com/miekg/dns"
-	"github.com/valyala/fasthttp"
 )
 
 // Config is the DNS proxy configuration.
@@ -40,7 +36,7 @@ type DNSProxy struct {
 const defaultTTL = 60
 
 // type check
-var _ io.Closer = (*DNSProxy)(nil)
+// var _ io.Closer = (*DNSProxy)(nil)
 
 // New creates a new instance of *DNSProxy
 func New(cfg *Config) (d *DNSProxy, err error) {
@@ -98,13 +94,13 @@ func (d *DNSProxy) requestHandler(p *proxy.Proxy, ctx *proxy.DNSContext) (err er
 }
 
 // Start starts the DNSProxy server.
-func (d *DNSProxy) Start() (err error) {
-	err = d.proxy.Start()
-	return err
-}
+// func (d *DNSProxy) Start() (err error) {
+// 	err = d.proxy.Start()
+// 	return err
+// }
 
 // Close implements the [io.Closer] interface for DNSProxy.
-func (d *DNSProxy) Close() (err error) {
-	err = d.proxy.Shutdown()
-	return err
-}
+// func (d *DNSProxy) Close() (err error) {
+// 	err = d.proxy.Stop()
+// 	return err
+// }
