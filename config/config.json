@@ -28,7 +28,7 @@
       "maxCacheEntryAgeSeconds": 10
     },
     "pprofConfiguration": {
-      "enabled": true,
+      "enabled": false,
       "listenAddress": "127.0.0.1:10054"
     }
   }

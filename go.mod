@@ -36,10 +36,12 @@ require (
 
 require (
 	github.com/AdguardTeam/dnsproxy v0.69.0
+	github.com/hashicorp/golang-lru v1.0.2
 	github.com/miekg/dns v1.1.58
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7
 	github.com/rs/zerolog v1.32.0
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/valyala/fasthttp v1.52.0
+	golang.org/x/sync v0.7.0
 )
