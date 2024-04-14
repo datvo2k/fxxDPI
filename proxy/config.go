@@ -4,9 +4,13 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"os"
 	"net"
+	"os"
 )
+
+type MetricsConfiguration struct {
+	TimerIntervalSeconds int `json:"timerIntervalSeconds"`
+}
 
 // DNSServerConfiguration is the DNS server configuration.
 type DNSServerConfiguration struct {
@@ -57,11 +61,12 @@ type PprofConfiguration struct {
 
 // Configuration is the DNS proxy configuration.
 type Configuration struct {
+	MetricsConfiguration   MetricsConfiguration   `json:"metricsConfiguration"`
 	DNSServerConfiguration DNSServerConfiguration `json:"dnsServerConfiguration"`
 	DOHClientConfiguration DOHClientConfiguration `json:"dohClientConfiguration"`
 	DNSProxyConfiguration  DNSProxyConfiguration  `json:"dnsProxyConfiguration"`
-	CacheConfiguration     CacheConfiguration     `json:"cacheConfiguration"`
-	PrefetchConfiguration  PrefetchConfiguration  `json:"PrefetchConfiguration"`
+	// CacheConfiguration     CacheConfiguration     `json:"cacheConfiguration"`
+	// PrefetchConfiguration  PrefetchConfiguration  `json:"PrefetchConfiguration"`
 	PprofConfiguration     PprofConfiguration     `json:"pprofConfiguration"`
 }
 

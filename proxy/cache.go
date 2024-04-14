@@ -9,6 +9,15 @@ import (
 	"github.com/miekg/dns"
 )
 
+/**
+ * getCacheKey is a function that generates a cache key based on a DNS question.
+ *
+ * Parameters:
+ * - question: a pointer to a dns.Question object representing the DNS question
+ *
+ * Returns:
+ * - a string representing the cache key generated from the DNS question
+ */
 func getCacheKey(question *dns.Question) string {
 	return fmt.Sprintf("%s:%d", dns.CanonicalName(question.Name), question.Qtype)
 }
