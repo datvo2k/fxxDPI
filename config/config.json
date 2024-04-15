@@ -1,34 +1,37 @@
 {
-    "dnsServerConfiguration": {
-      "listenAddress": {
-        "host": "127.0.0.1",
-        "port": "10053"
-      }
-    },
-    "dohClientConfiguration": {
-      "url": "https://cloudflare-dns.com/dns-query",
-      "maxConcurrentRequests": 100,
-      "semaphoreAcquireTimeoutMilliseconds": 100,
-      "requestTimeoutMilliseconds": 4000
-    },
-    "dnsProxyConfiguration": {
-      "clampMinTTLSeconds": 10,
-      "clampMaxTTLSeconds": 30,
-      "blockedDomainsFile": "./blocklist.txt"
-    },
-    "cacheConfiguration": {
-      "maxSize": 20000,
-      "maxPurgesPerTimerPop": 100,
-      "timerIntervalSeconds": 10
-    },
-    "prefetchConfiguration": {
-      "maxCacheSize": 10000,
-      "numWorkers": 2,
-      "sleepIntervalSeconds": 10,
-      "maxCacheEntryAgeSeconds": 10
-    },
-    "pprofConfiguration": {
-      "enabled": false,
-      "listenAddress": "127.0.0.1:10054"
+  "metricsConfiguration": {
+    "timerIntervalSeconds": 10
+  },
+  "dnsServerConfiguration": {
+    "listenAddress": {
+      "host": "127.0.0.1",
+      "port": "10053"
     }
+  },
+  "dohClientConfiguration": {
+    "url": "https://cloudflare-dns.com/dns-query",
+    "maxConcurrentRequests": 100,
+    "semaphoreAcquireTimeoutMilliseconds": 100,
+    "requestTimeoutMilliseconds": 4000
+  },
+  "dnsProxyConfiguration": {
+    "clampMinTTLSeconds": 10,
+    "clampMaxTTLSeconds": 30,
+    "blockedDomainsFile": "./blocklist/blocklist.txt"
+  },
+  "cacheConfiguration": {
+    "maxSize": 20000,
+    "maxPurgesPerTimerPop": 100,
+    "timerIntervalSeconds": 10
+  },
+  "prefetchConfiguration": {
+    "maxCacheSize": 10000,
+    "numWorkers": 2,
+    "sleepIntervalSeconds": 10,
+    "maxCacheEntryAgeSeconds": 10
+  },
+  "pprofConfiguration": {
+    "enabled": false,
+    "listenAddress": "127.0.0.1:10054"
   }
+}

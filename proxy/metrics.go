@@ -243,10 +243,8 @@ func (metrics *metrics) String() string {
 func (metrics *metrics) runPeriodicTimer() {
 	ticker := time.NewTicker(time.Duration(metrics.configuration.TimerIntervalSeconds) * time.Second)
 
-	for {
-		<-ticker.C
-
-		log.Printf("metrics: %v", metrics)
+	for range ticker.C {
+		log.Printf("metrics: %v", metrics.String())
 	}
 }
 

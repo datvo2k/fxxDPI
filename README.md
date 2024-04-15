@@ -20,5 +20,10 @@ This software designed to bypass DPI with techniques like DoH, ECH and split CLI
 ## LOGS:
 - version 0.1
 
+## HOW TO CHECK
+```
+http_proxy=http://127.0.0.1:10053 wget -O - https://example.com
+```
+
 ## VERSIONS:
 - 7/4/2023: v0.1
