@@ -65,8 +65,6 @@ type Configuration struct {
 	DNSServerConfiguration DNSServerConfiguration `json:"dnsServerConfiguration"`
 	DOHClientConfiguration DOHClientConfiguration `json:"dohClientConfiguration"`
 	DNSProxyConfiguration  DNSProxyConfiguration  `json:"dnsProxyConfiguration"`
-	// CacheConfiguration     CacheConfiguration     `json:"cacheConfiguration"`
-	// PrefetchConfiguration  PrefetchConfiguration  `json:"PrefetchConfiguration"`
 	PprofConfiguration     PprofConfiguration     `json:"pprofConfiguration"`
 }
 

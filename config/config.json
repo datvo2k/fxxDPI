@@ -4,7 +4,7 @@
   },
   "dnsServerConfiguration": {
     "listenAddress": {
-      "host": "127.0.0.1",
+      "host": "localhost",
       "port": "10053"
     }
   },
@@ -18,17 +18,6 @@
     "clampMinTTLSeconds": 10,
     "clampMaxTTLSeconds": 30,
     "blockedDomainsFile": "./blocklist/blocklist.txt"
-  },
-  "cacheConfiguration": {
-    "maxSize": 20000,
-    "maxPurgesPerTimerPop": 100,
-    "timerIntervalSeconds": 10
-  },
-  "prefetchConfiguration": {
-    "maxCacheSize": 10000,
-    "numWorkers": 2,
-    "sleepIntervalSeconds": 10,
-    "maxCacheEntryAgeSeconds": 10
   },
   "pprofConfiguration": {
     "enabled": false,
