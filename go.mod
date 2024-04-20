@@ -38,6 +38,7 @@ require (
 
 require (
 	github.com/AdguardTeam/dnsproxy v0.69.0
+	github.com/elazarl/goproxy v0.0.0-20231117061959-7cc037d33fb5
 	github.com/hashicorp/golang-lru v1.0.2
 	github.com/kr/pretty v0.3.1
 	github.com/miekg/dns v1.1.58
