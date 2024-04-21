@@ -1,5 +1,5 @@
 # FXXDPI - Use to bypass ISP blocking of some domains
-This software designed to bypass DPI with techniques like DoH, ECH and split CLIENT-HELLO packet into small chunks.
+This software designed to bypass DPI with techniques like DoH, ECH and split CLIENT-HELLO packet into small chunks. (SNIProxy)
 
 ## REFERENCES
 [A walk-through of an SSL handshake](https://www.commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art059)   

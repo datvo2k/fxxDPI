@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"net"
 	"os"
 )
 
@@ -16,16 +15,6 @@ type Configuration struct {
 	BlockedDomainFile string    `json:"blockedDomainFile"`
 }
 
-// HostAndPort represents a host and port combination.
-type HostAndPort struct {
-	Host string `json:"host"`
-	Port string `json:"port"`
-}
-
-// joinHostPort joins the host and port together.
-func (hostAndPort *HostAndPort) joinHostPort() string {
-	return net.JoinHostPort(hostAndPort.Host, hostAndPort.Port)
-}
 
 // DNSConfig represents DNS configuration with properties for type, server, and cache size.
 type DNSConfig struct {
