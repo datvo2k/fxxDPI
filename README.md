@@ -1,5 +1,5 @@
 # FXXDPI - Use to bypass ISP blocking of some domains
-This software designed to bypass DPI with techniques like DoH, ECH and split CLIENT-HELLO packet into small chunks.
+This software designed to bypass DPI with techniques like DoH, ECH and split CLIENT-HELLO packet into small chunks. (SNIProxy)
 
 ## REFERENCES
 [A walk-through of an SSL handshake](https://www.commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art059)   
@@ -10,14 +10,14 @@ This software designed to bypass DPI with techniques like DoH, ECH and split CLI
 [A dive into TLS 1.3 Architecture and its advantages over TLS 1.2](https://medium.com/@akarX23/a-dive-into-tls-1-3-architecture-and-its-advantages-over-tls-1-2-2f552de24fa0)
 
 
-## IDEA:
+## IDEA
 - Run proxy localhost 
 - Use DNS providers like cloudflare, GoogleDNS, OpenDNS
 
-## EXPLAIN:
+## EXPLAIN
 ### HOW TO WORK
 
-## LOGS:
+## LOGS
 - version 0.1
 
 ## HOW TO CHECK
@@ -25,5 +25,9 @@ This software designed to bypass DPI with techniques like DoH, ECH and split CLI
 http_proxy=http://127.0.0.1:10053 wget -O - https://example.com
 ```
 
-## VERSIONS:
+## VERSIONS
 - 7/4/2023: v0.1
+
+## SUPPORTS
+- Support for DNS-over-HTTPS (DoH, RFC8484), client and server with HTTP2
+- Connection reuse and pipelining queries for efficiency

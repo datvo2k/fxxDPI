@@ -1,0 +1,10 @@
+{
+  "host": "127.0.0.1",
+  "port": "8001",
+  "dns": {
+    "type": "https",
+    "server": "https://cloudflare-dns.com/dns-query",
+    "cacheSize": 1000
+  },
+  "blockedDomainFile": ".blocklist/blocklist.txt"
+}
