@@ -44,6 +44,7 @@ require (
 	github.com/miekg/dns v1.1.58
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7
 	github.com/rs/zerolog v1.32.0
+	github.com/sirupsen/logrus v1.9.3
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/valyala/fasthttp v1.52.0
